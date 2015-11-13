@@ -15,9 +15,10 @@ public class NumberDisplay
     /**
      * Constructor for objects of class NumberDisplay
      */
-    public NumberDisplay(int limitNumber, int display1)
+    public NumberDisplay(int limitNumber, int display2)
     {
         display = 0;
+        display1 = display2;
     }
 
     public void setValue()
@@ -30,5 +31,9 @@ public class NumberDisplay
         String displaY = "%02d";
         String resultado = String.format(displaY,display);
         return resultado;
+    }
+    public int getValue()
+    {
+        return display;
     }
 }

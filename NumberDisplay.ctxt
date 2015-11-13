@@ -1,9 +1,11 @@
 #BlueJ class context
-comment0.params=limitNumber\ display1
+comment0.params=limitNumber\ display2
 comment0.target=NumberDisplay(int,\ int)
 comment0.text=\n\ Constructor\ for\ objects\ of\ class\ NumberDisplay\n
 comment1.params=
 comment1.target=void\ setValue()
 comment2.params=
 comment2.target=java.lang.String\ getDisplayValue()
-numComments=3
+comment3.params=
+comment3.target=int\ getValue()
+numComments=4
