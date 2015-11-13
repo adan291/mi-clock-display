@@ -10,18 +10,17 @@ public class NumberDisplay
     private int limitNumber;
     
     private int display;
-    private int display1;
     
     /**
      * Constructor for objects of class NumberDisplay
      */
-    public NumberDisplay(int limitNumber, int display2)
+    public NumberDisplay(int limitNumber1)
     {
         display = 0;
-        display1 = display2;
+        limitNumber = limitNumber1;
     }
 
-    public void setValue()
+    public void setValue(int display1)
     {
         display =  display1;
     }
@@ -40,11 +39,11 @@ public class NumberDisplay
     
     public void increment()
     { 
-        if (display == limitNumber) {
-            display = 0;
-        }
         if (display < limitNumber) {
-            display=display+1;
+            display++;
+        }
+        else {
+            display = 0;
         }
     }
 }
