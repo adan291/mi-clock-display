@@ -7,16 +7,16 @@
  */
 public class NumberDisplay
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private int limitNumber;
+    private int display;
+    
     /**
      * Constructor for objects of class NumberDisplay
      */
-    public NumberDisplay()
+    public NumberDisplay(int limitNumber, int display)
     {
         // initialise instance variables
-        x = 0;
+        display = 0;
     }
 
     /**
@@ -28,6 +28,6 @@ public class NumberDisplay
     public int sampleMethod(int y)
     {
         // put your code here
-        return x + y;
+        
     }
 }
