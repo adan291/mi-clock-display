@@ -32,8 +32,19 @@ public class NumberDisplay
         String resultado = String.format(displaY,display);
         return resultado;
     }
+    
     public int getValue()
     {
         return display;
+    }
+    
+    public void increment()
+    { 
+        if (display == limitNumber) {
+            display = 0;
+        }
+        if (display < limitNumber) {
+            display=display+1;
+        }
     }
 }
