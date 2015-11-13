@@ -8,26 +8,27 @@
 public class NumberDisplay
 {
     private int limitNumber;
+    
     private int display;
+    private int display1;
     
     /**
      * Constructor for objects of class NumberDisplay
      */
-    public NumberDisplay(int limitNumber, int display)
+    public NumberDisplay(int limitNumber, int display1)
     {
-        // initialise instance variables
         display = 0;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public void setValue()
     {
-        // put your code here
-        
+        display =  display1;
+    }
+    
+    public String getDisplayValue()
+    {
+        String displaY = "%02d";
+        String resultado = String.format(displaY,display);
+        return resultado;
     }
 }
