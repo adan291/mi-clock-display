@@ -16,8 +16,8 @@ public class NumberDisplay
      */
     public NumberDisplay(int limitNumber1)
     {
-        display = 0;
         limitNumber = limitNumber1;
+        display = 0;
     }
 
     public void setValue(int display1)
