@@ -14,21 +14,28 @@ public class ClockDisplay
     //horas actual
     private String horaActual;
     
+    /*
+     * Constructor que inicializa a oo:oo
+     */
     public ClockDisplay()
     {
-       
-        horas = new NumberDisplay(24);
-        minutos = new NumberDisplay(60);
+       horas = new NumberDisplay(24);
+       minutos = new NumberDisplay(60);
        actualHoraDisplay();
     }
-     
+    
+    /*
+     * Constructor qye devuelve hora actual
+     */
     public void actualHoraDisplay()
     {
-        
         horaActual = horas.getDisplayValue() + ":" +
                      minutos.getDisplayValue();
     }
-  
+    
+    /*
+     * Constructor para dar la hora y minutos dados
+     */
     public ClockDisplay(int hora, int minuto)
     {
         horas = new NumberDisplay(24);
@@ -36,18 +43,27 @@ public class ClockDisplay
         setTime(hora, minuto);
     }
     
+    /*
+     * Constructor dar hora actual
+     */
         public String getTime()
     {
         return horaActual;
     }
-     
+    
+    /*
+     * Constructor poner hora fija sin devolver
+     */
     public void setTime(int hora, int minuto)
     {
         horas.setValue(hora);
         minutos.setValue(minuto);
         actualHoraDisplay();
     }
- 
+    
+    /*
+     * Constructor que incrementa los minutos y las horas si son necesarias
+     */
     public void timeTick()
     {
         minutos.increment();
