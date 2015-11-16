@@ -2,7 +2,7 @@
 comment0.params=
 comment0.target=ClockDisplay()
 comment1.params=
-comment1.target=void\ updateDisplay()
+comment1.target=void\ actualHoraDisplay()
 comment2.params=hora\ minuto
 comment2.target=ClockDisplay(int,\ int)
 comment3.params=

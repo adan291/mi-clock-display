@@ -19,10 +19,10 @@ public class ClockDisplay
        
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
-        updateDisplay();
+       actualHoraDisplay();
     }
      
-    public void updateDisplay()
+    public void actualHoraDisplay()
     {
         
         horaActual = horas.getDisplayValue() + ":" +
@@ -31,7 +31,6 @@ public class ClockDisplay
   
     public ClockDisplay(int hora, int minuto)
     {
-        
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
         setTime(hora, minuto);
@@ -46,7 +45,7 @@ public class ClockDisplay
     {
         horas.setValue(hora);
         minutos.setValue(minuto);
-        updateDisplay();
+        actualHoraDisplay();
     }
  
     public void timeTick()
@@ -55,6 +54,6 @@ public class ClockDisplay
         if(minutos.getValue() == 0) {
             horas.increment();
         }
-        updateDisplay();
+        actualHoraDisplay();
     }
 }
