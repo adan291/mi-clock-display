@@ -19,13 +19,13 @@ public class ClockDisplay
      */
     public ClockDisplay()
     {
-       horas = new NumberDisplay(24);
-       minutos = new NumberDisplay(60);
+       horas = new NumberDisplay(24);//Con esto creamos un nuevo objeto de la clase NumberDisplay
+       minutos = new NumberDisplay(60);//Con esto creamos un nuevo objeto de la clase NumberDisplay
        actualHoraDisplay();
     }
     
     /*
-     * Constructor qye devuelve hora actual
+     * Metodo para la hora actual
      */
     public void actualHoraDisplay()
     {
@@ -44,7 +44,7 @@ public class ClockDisplay
     }
     
     /*
-     * Constructor dar hora actual
+     * Metodo dar hora actual
      */
         public String getTime()
     {
@@ -52,7 +52,7 @@ public class ClockDisplay
     }
     
     /*
-     * Constructor poner hora fija sin devolver
+     * Metodo poner hora fija sin devolver
      */
     public void setTime(int hora, int minuto)
     {
@@ -62,7 +62,7 @@ public class ClockDisplay
     }
     
     /*
-     * Constructor que incrementa los minutos y las horas si son necesarias
+     * Metodo que incrementa los minutos y las horas si son necesarios
      */
     public void timeTick()
     {
