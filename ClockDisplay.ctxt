@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=tipo
 comment0.target=ClockDisplay(boolean)
-comment0.text=\n\ Constructor\ que\ inicializa\ a\ oo\:oo\n
+comment0.text=\n\ Constructor\ que\ inicializa\ a\ oo\:oo\n\ Escribe\ true\ para\ formato\ 12\ o\ false\ para\ formato\ 24\n
 comment1.params=
 comment1.target=void\ actualHoraDisplay()
 comment1.text=\n\ Metodo\ para\ la\ hora\ actual\n

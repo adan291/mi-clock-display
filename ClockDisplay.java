@@ -17,6 +17,7 @@ public class ClockDisplay
     private boolean tipos;
     /*
      * Constructor que inicializa a oo:oo
+     * Escribe true para formato 12 o false para formato 24
      */
     public ClockDisplay(boolean tipo)
     {
