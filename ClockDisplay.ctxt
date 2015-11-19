@@ -1,12 +1,12 @@
 #BlueJ class context
-comment0.params=
-comment0.target=ClockDisplay()
+comment0.params=tipo
+comment0.target=ClockDisplay(boolean)
 comment0.text=\n\ Constructor\ que\ inicializa\ a\ oo\:oo\n
 comment1.params=
 comment1.target=void\ actualHoraDisplay()
 comment1.text=\n\ Metodo\ para\ la\ hora\ actual\n
-comment2.params=hora\ minuto
-comment2.target=ClockDisplay(int,\ int)
+comment2.params=hora\ minuto\ tipo
+comment2.target=ClockDisplay(int,\ int,\ boolean)
 comment2.text=\n\ Constructor\ para\ dar\ la\ hora\ y\ minutos\ dados\n
 comment3.params=
 comment3.target=java.lang.String\ getTime()
