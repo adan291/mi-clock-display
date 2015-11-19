@@ -29,8 +29,13 @@ public class ClockDisplay
      */
     public void actualHoraDisplay()
     {
-        horaActual = horas.getDisplayValue() + ":" +
-                     minutos.getDisplayValue();
+        if (horas.getValue() > 12) {
+            int hora = (horas.getValue() - 12);
+            horaActual = hora + ":" + minutos.getDisplayValue() + " PM";
+        }
+        else{
+            horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue() + " AM";
+        }
     }
     
     /*

@@ -9,6 +9,7 @@ public class NumberDisplay
 {
     private int limitNumber;
     
+    //valor
     private int display;
     
     /**
