@@ -20,7 +20,7 @@ public class ClockDisplay
     public ClockDisplay()
     {
        horas = new NumberDisplay(24);//Con esto creamos un nuevo objeto de la clase NumberDisplay
-       minutos = new NumberDisplay(60);//Con esto creamos un nuevo objeto de la clase NumberDisplay
+       minutos = new NumberDisplay(59);//Con esto creamos un nuevo objeto de la clase NumberDisplay
        actualHoraDisplay();
     }
     
@@ -44,7 +44,7 @@ public class ClockDisplay
     public ClockDisplay(int hora, int minuto)
     {
         horas = new NumberDisplay(24);
-        minutos = new NumberDisplay(60);
+        minutos = new NumberDisplay(59);
         setTime(hora, minuto);
     }
     
