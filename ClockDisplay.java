@@ -41,9 +41,9 @@ public class ClockDisplay
         }
         else{
             horas = new NumberDisplay(24);//Con esto creamos un nuevo objeto de la clase NumberDisplay
-            minutos = new NumberDisplay(59);//Con esto creamos un nuevo objeto de la clase NumberDisplay
-            dias = new NumberDisplay(30);
-            meses = new NumberDisplay(12);
+            minutos = new NumberDisplay(60);//Con esto creamos un nuevo objeto de la clase NumberDisplay
+            dias = new NumberDisplay(31);
+            meses = new NumberDisplay(13);
             años = new NumberDisplay(99);
             actualHoraDisplay();
             tipos = tipo;
@@ -58,7 +58,7 @@ public class ClockDisplay
        if (tipos == true){
            if (horas.getValue() > 12) {
                int hora = (horas.getValue() - 12);
-               horaActual = hora + ":" + minutos.getDisplayValue() + " PM";
+               horaActual = hora + ":" + minutos.getDisplayValue() + " PM" + " Cal " + dias.getDisplayValue() + "/" + meses.getDisplayValue() + "/" + años.getDisplayValue();;
            }
            else{
                 horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue() + " AM" + " Cal " + dias.getDisplayValue() + "/" + meses.getDisplayValue() + "/" + años.getDisplayValue();
@@ -77,10 +77,11 @@ public class ClockDisplay
     public ClockDisplay(int hora, int minuto, int dia, int mes, int año, boolean tipo)
     {
         horas = new NumberDisplay(24);
-        minutos = new NumberDisplay(59);
-        dias = new NumberDisplay(30);
-        meses = new NumberDisplay(12);
+        minutos = new NumberDisplay(60);
+        dias = new NumberDisplay(31);
+        meses = new NumberDisplay(13);
         años = new NumberDisplay(99);
+        tipos = tipo;
         setTime(hora, minuto,dia,mes,año);
     }
     
@@ -111,8 +112,23 @@ public class ClockDisplay
     public void timeTick()
     {
         minutos.increment();
-        if(minutos.getValue() == 0) {
+        if ( minutos.getValue() == 0) {
             horas.increment();
+            if ( horas.getValue() == 0) {
+                dias.increment();
+                if (dias.getValue() == 0){
+                    dias.setValue(1);
+                }
+                if ( dias.getValue() == 1) {
+                    meses.increment();
+                    if (meses.getValue() == 0) {
+                        meses.setValue(1);
+                    }
+                    if ( meses.getValue() == 1) {
+                        años.increment();
+                    }
+                }
+            }
         }
         actualHoraDisplay();
     }
